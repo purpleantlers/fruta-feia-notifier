@@ -1,8 +1,10 @@
-# <div style="display: flex; align-items: center; justify-content: center; gap: 20px;"><img style="width: 80px;" src="https://frutafeia.pt/sites/all/themes/frutafeia/images/logo-limao.png" alt="Fruta Feia Logo"> <span>Fruta Feia Basket Scraper</span></div>
+<h1 align="center">
+  <img src="https://frutafeia.pt/sites/all/themes/frutafeia/images/logo-limao.png" width="60" align="center">
+  &nbsp;
+  <span>Fruta Feia Basket Scraper</span>
+</h1>
 
 A lightweight TypeScript scraper that checks your weekly **Fruta Feia** basket and sends a beautifully formatted **HTML** summary to your email. No more manual checking, get your grocery list delivered to your inbox as soon as it's ready.
-
----
 
 ## ✨ Features
 
@@ -12,15 +14,11 @@ A lightweight TypeScript scraper that checks your weekly **Fruta Feia** basket a
 - **Automation with Task Scheduler**: Using Windows to schedule the execution of the code every week.
 - **TypeScript**: Fully typed for better maintainability.
 
----
-
 ## 🛠️ Prerequisites
 
 - **Node.js** (v18 or higher)
 - An active **Fruta Feia** account.
 - A Gmail account (or any SMTP service) to send the emails.
-
----
 
 ## ⚙️ Setup & Installation
 
@@ -73,7 +71,7 @@ A lightweight TypeScript scraper that checks your weekly **Fruta Feia** basket a
         * Click **Create**.
 
       - Copy Your Code
-        * A dialog box will appear with a **16-character code** in a yellow box (e.g., `abcd efgh ijkl mnop`).
+        * A dialogue box will appear with a **16-character code** in a yellow box (e.g., `abcd efgh ijkl mnop`).
         * **Copy this code.** You will not be able to see it again after you click **Done**.
 
       - Update your `.env` File
@@ -93,29 +91,34 @@ To run this every week automatically:
 2. Add a name (e.g., Fruta Feia Notifier).
 3. Add a description (e.g., Notifies me every Wednesday at 10:00.).
 4. Click Next and select **Trigger Weekly**.
-5. Click Next and select the day and time and click Synchronize across time zones (e.g., at 10:00 on Wednesday starting today).
+5. Click Next and select the day and time, and click Synchronise across time zones (e.g., at 10:00 on Wednesday starting today).
 6. Click Next and select Start a program.
 7. Click Next and add:
-  - Program/script: powershell.exe
-  - Add arguments (optional): -Command "path_of_the_folder; npx tsx scraper.ts"
+   - Program/script: powershell.exe
+   - Add arguments (optional): -Command "path_of_the_folder; npx tsx scraper.ts"
 8. Click Next and Finish.
 
 ## 📧 Email Preview
 
 The script generates a clean, responsive list of your weekly products. If your session expires, you will receive a notification prompting you to refresh your `SESSION_COOKIE`.
+<div align="center">
+   <img width="345" height="304" alt="Success Email Template" src="https://github.com/user-attachments/assets/cc1c3b7c-1678-47bc-a415-356759f33087" />
+   <img width="347" height="171" alt="Error Email Template" src="https://github.com/user-attachments/assets/8363e83c-ca47-4f70-8f1c-735cc0017f8f" />
+</div>
 
 
 
 ## ❗ Disclaimer
 
-This project is not affiliated with, maintained, authorized, endorsed, or sponsored by Fruta Feia. It is an independent tool created for personal use.
+This project is not affiliated with, maintained, authorised, endorsed, or sponsored by Fruta Feia. It is an independent tool created for personal use.
 
-Please use responsibly and respect their website's terms of service.
+Please be sure to use responsibly and respect their website's terms of service.
 
----
-
-<div style="display: flex; justify-content: center;">
-  <span>Developed by <a style="color: #B303CE; font-weight: bold; text-decoration: none;" href="https://purpleantlers.dev/">Purple Antlers</a></span>
+<h1></h1>
+<div align="center">
+   <span>Developed by</span>
+   <a href="https://purpleantlers.dev/">
+     <img align="center" src="https://img.shields.io/badge/-Purple%20Antlers-B303CE?style=flat-square" alt="Purple Antlers">
+   </a>
 </div>
-
----
+<h1></h1>
