@@ -14,6 +14,22 @@ A lightweight TypeScript scraper that checks your weekly **Fruta Feia** basket a
 - **Automation with Task Scheduler**: Using Windows to schedule the execution of the code every week.
 - **TypeScript**: Fully typed for better maintainability.
 
+## 💼 How It Works
+
+The scraper follows a linear execution flow to ensure data integrity and session validity:
+
+1. **Authentication Check**: The script initializes an **Axios** instance using the `SESSION_COOKIE` from the `.env` file.
+
+2. **DOM Parsing**: It performs a `GET` request to the **Fruta Feia** portal. **Cheerio** then loads the `HTML` to target specific selectors containing the weekly basket list.
+
+3. **Validation**:
+
+   - If the product list is found, it maps the data into a clean array.
+
+   - If the login page is detected (cookie expired), it triggers a **Warning Email**.
+
+4. **Email Dispatch**: Using `Nodemailer`, it injects the data into a responsive `HTML` template and sends it to the `TARGET_EMAILS`.
+
 ## 🛠️ Prerequisites
 
 - **Node.js** (v18 or higher)
