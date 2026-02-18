@@ -45,7 +45,7 @@ const scrapeWebsite = async () => {
     if (isLoggedIn) {
       console.log('✅ Success! Still Logged In.')
 
-      const firstBasket = $('.view-content').first()
+      const firstBasket = $('.field-name-field-cesta-pequena .view-content')
 
       // Extract product names from the first basket
       const productList: string[] = []
@@ -102,7 +102,7 @@ const scrapeWebsite = async () => {
 
       await transporter.sendMail({
         from: `"Fruta Feia Bot" <${process.env.EMAIL_USER}>`,
-        to: `${process.env.TARGET_EMAIL1}, ${process.env.TARGET_EMAIL2}`,
+        to: `${process.env.TARGET_EMAIL1},${process.env.TARGET_EMAIL2}`,
         subject: `O teu cesto está pronto! (${new Date().toLocaleDateString('pt-PT')})`,
         html: htmlContent,
       })
@@ -142,7 +142,7 @@ const scrapeWebsite = async () => {
 
     await transporter.sendMail({
       from: `"Fruta Feia Bot" <${process.env.EMAIL_USER}>`,
-      to: `${process.env.TARGET_EMAIL1}, ${process.env.TARGET_EMAIL2}`,
+      to: `${process.env.TARGET_EMAIL1},${process.env.TARGET_EMAIL2}`,
       subject: `Erro no cesto! (${new Date().toLocaleDateString('pt-PT')})`,
       html: htmlContent,
     })
